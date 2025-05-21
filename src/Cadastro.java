@@ -28,14 +28,30 @@ public class Cadastro {
             System.out.print("Digite a senha do funcionário (4 a 12 caracteres): ");
             senha = scanner.nextLine();
             if (senha.length() < 4 || senha.length() > 12) {
-                System.out.println("Erro: A senha deve conter entre 4 e 12 caracteres. Tente novamente.");
-                
-                //criptografa a senha
-                
-                senhaHash = Criptografia.gerarHash(senha);
+                System.out.println("Erro: A senha deve ter entre 4 e 12 caracteres.");
                 continue;
             }
 
+            boolean temLetra = senha.matches(".[a-zA-Z].");
+            boolean temNumero = senha.matches(".[0-9].");
+            boolean temEspecial = senha.matches(".[!@#$%^&()+=\\-].");
+
+            if (!temLetra) {
+                System.out.println("Erro: A senha deve conter ao menos uma letra.");
+
+            } else if (!temNumero) {
+                System.out.println("Erro: A senha deve conter ao menos um número.");
+                continue;
+
+            } else if (!temEspecial) {
+                System.out.println("Erro: A senha deve conter ao menos um caractere especial (!@#$%^&()-+=).");
+            } else {
+                System.out.println("Senha válida!");
+                continue;
+            }
+        } while (true) ;
+
+        do {
             System.out.print("Digite o email do funcionário: ");
             email = scanner.nextLine();
             if (!EmailValidator.isValidEmail(email)) {
@@ -52,7 +68,7 @@ public class Cadastro {
 
             break;
 
-        } while (true) ;
+        } while (true);
 
         // conectar com o banco de dados
 
