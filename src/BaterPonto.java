@@ -47,6 +47,7 @@ public class BaterPonto {
         } catch (SQLException e) {
             System.out.println("Erro ao conectar ou executar comando no banco: " + e.getMessage());
         } finally {
+
             // Fechar recursos para evitar vazamento de memória
             try {
                 if (stmt != null) stmt.close();

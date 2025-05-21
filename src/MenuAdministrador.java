@@ -4,6 +4,7 @@ public class MenuAdministrador {
 
     public void exibirMenu() {
 
+        Cadastro cadastro = new Cadastro();
         Preferencias pref = new Preferencias();
         Scanner sc = new Scanner(System.in);
         int escolha;
@@ -26,7 +27,7 @@ public class MenuAdministrador {
 
             switch (escolha) {
                 case 1:
-                    System.out.println("Você escolheu Cadastrar usuário");
+                    cadastro.cadastrarUsuario();
                     break;
                 case 2:
                     System.out.println("Você escolheu Gestão de acessos");
