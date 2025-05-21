@@ -45,6 +45,10 @@ public class MenuUsuario {
                     pref.exibirPreferencias();
                     break;
 
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+
                 default:
                     System.out.println("Opção inválida!");
 

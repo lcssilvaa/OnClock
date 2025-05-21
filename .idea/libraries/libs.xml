@@ -2,9 +2,11 @@
   <library name="libs">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/src/libs" />
+      <root url="file://$USER_HOME$/Downloads/openjfx-24.0.1_windows-x64_bin-sdk/javafx-sdk-24.0.1/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
     <jarDirectory url="file://$PROJECT_DIR$/src/libs" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/openjfx-24.0.1_windows-x64_bin-sdk/javafx-sdk-24.0.1/lib" recursive="false" />
   </library>
 </component>
